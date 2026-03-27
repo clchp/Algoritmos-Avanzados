@@ -122,9 +122,9 @@ int main() {
     // Imprimir al inicio
     imprimir_laberinto(laberinto);
     cout<<endl;
-    // Encontrar la solución
+    // Encontrar una SOLA solución
     //enontrar_solucion_laberinto(0,0, laberinto, solucion);
-    //encontrar todas
+    //encontrar todas las soluciones
     encontrar_todas(0, 0,laberinto, solucion);
     cout<<endl<<"Las soluciones totales son: "<<NUM_SOLUCIONES<<endl;
     return 0;
