@@ -42,7 +42,7 @@ bool resolver_rey(int x, int y, vector<vector<int>> &tablero, int number_positio
         int nx = x + m.first;
         int ny = y + m.second;
 
-        // Si es válido y tiene exactamente la cantidad de salidas que estamos buscando en este turno
+        // Si es válido
         if (valido(nx, ny, tablero)) {
             tablero[nx][ny] = number_position;
             if (resolver_rey(nx, ny, tablero, number_position + 1)) {
