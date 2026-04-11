@@ -30,7 +30,6 @@ void solucion_permutaciones(int n, vector<int> arr) {
 
             solucion.pop_back();
             usado[i] = false;
-
         }
     }
 }
