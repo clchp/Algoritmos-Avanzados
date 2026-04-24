@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 4.0)
-project(CoinRow)
+project(Fibonacci)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(CoinRow main.cpp)
+add_executable(Fibonacci main.cpp)
