@@ -1,0 +1,3 @@
+C:/Users/npwma/Desktop/Programas/C++/ALGORITMIA AVANZADA/CAP3/Nuevossss/Corte1Dimension/cmake-build-debug/CMakeFiles/Corte1Dimension.dir
+C:/Users/npwma/Desktop/Programas/C++/ALGORITMIA AVANZADA/CAP3/Nuevossss/Corte1Dimension/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/npwma/Desktop/Programas/C++/ALGORITMIA AVANZADA/CAP3/Nuevossss/Corte1Dimension/cmake-build-debug/CMakeFiles/rebuild_cache.dir
