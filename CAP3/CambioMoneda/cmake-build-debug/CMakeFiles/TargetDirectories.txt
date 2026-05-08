@@ -1,0 +1,3 @@
+C:/Users/npwma/Desktop/Programas/C++/ALGORITMIA AVANZADA/CAP3/Nuevossss/CambioMoneda/cmake-build-debug/CMakeFiles/CambioMoneda.dir
+C:/Users/npwma/Desktop/Programas/C++/ALGORITMIA AVANZADA/CAP3/Nuevossss/CambioMoneda/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/npwma/Desktop/Programas/C++/ALGORITMIA AVANZADA/CAP3/Nuevossss/CambioMoneda/cmake-build-debug/CMakeFiles/rebuild_cache.dir
