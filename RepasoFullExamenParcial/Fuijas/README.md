@@ -7,15 +7,15 @@ Según lo que entendi la relacion para el examen es:
 
 ## PREGUNTA 1
 Revisar el github de corcuera
-link:https://github.com/jlcorcuera/pucp-adv-alg-2026-01/tree/main/cap-01-backtracking
+link:https://github.com/jlcorcuera/pucp-adv-alg-2026-01/tree/main/cap-01-backtracking <br>
 La delegada de su horario dio un mensaje entre lineas me parece 🩻
 
 ## PREGUNTA 2
 Cueva siempre sorprende, asi que no hagas esta nomas no sé, yo que tu no la hago
 
 ## PREGUNTA 3
-Tupia siempre hace maquinas, le gusta el scheduling, so mira alguno de los examenes pasados y ya esta
-NUNCA metera un problema NPFuckingHard skfhsdj segun lo que escuche so si tu IA te dice que ese caso es 
+Tupia siempre hace maquinas, le gusta el scheduling, so mira alguno de los examenes pasados y ya esta <br>
+NUNCA metera un problema NPFuckingHard skfhsdj segun lo que escuche so si tu IA te dice que ese caso es <br>
 NPFuckingHard no lo hagas, eso se ve en doctorado 🕊️
 
 ## Notas
