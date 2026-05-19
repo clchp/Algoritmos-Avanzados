@@ -14,8 +14,8 @@ La delegada de su horario dio un mensaje entre lineas me parece 🩻
 Cueva siempre sorprende, asi que no hagas esta nomas no sé, yo que tu no la hago
 
 ## PREGUNTA 3
-Tupia siempre hace maquinas, le gusta el scheduling, so mira alguno de los examenes pasados y ya esta <br>
-NUNCA metera un problema NPFuckingHard skfhsdj segun lo que escuche so si tu IA te dice que ese caso es <br>
+Tupia siempre hace maquinas, le gusta el scheduling, so mira alguno de los examenes pasados y ya esta
+NUNCA metera un problema NPFuckingHard skfhsdj segun lo que escuche so si tu IA te dice que ese caso es
 NPFuckingHard no lo hagas, eso se ve en doctorado 🕊️
 
 ## Notas
