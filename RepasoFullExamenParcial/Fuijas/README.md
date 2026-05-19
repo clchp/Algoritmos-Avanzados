@@ -1,9 +1,9 @@
 # FIJAS
 
 Según lo que entendi la relacion para el examen es:
-Pregunta 1 (BACKTRACKING): Corcuera
-Pregunta 2 (DP): Cueva
-Pregunta 3 (HEURISTICA): Tupia
+- Pregunta 1 (BACKTRACKING): Corcuera
+- Pregunta 2 (DP): Cueva
+- Pregunta 3 (HEURISTICA): Tupia
 
 ## PREGUNTA 1
 Revisar el github de corcuera
