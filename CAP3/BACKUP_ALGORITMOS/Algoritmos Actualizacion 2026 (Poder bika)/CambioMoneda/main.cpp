@@ -35,7 +35,7 @@ void encontrar_solucion(vector<int> denom, int cambio) {
     int i=0;
     while (cambio>0 and i<denom.size()) {
         if (denom[i]<=cambio) {
-            cambio -= denom[i]; //le quitamos
+            cambio -= denom[i]; //lo quitamos
             solucion.push_back(denom[i]);
         }
         else {
