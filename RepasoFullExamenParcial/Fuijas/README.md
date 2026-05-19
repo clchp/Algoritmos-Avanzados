@@ -1,6 +1,6 @@
 # FIJAS
 
-Según lo que entendi la relacione es esta para el examen
+Según lo que entendi la relacion para el examen es:
 Pregunta 1 (BACKTRACKING): Corcuera
 Pregunta 2 (DP): Cueva
 Pregunta 3 (HEURISTICA): Tupia
