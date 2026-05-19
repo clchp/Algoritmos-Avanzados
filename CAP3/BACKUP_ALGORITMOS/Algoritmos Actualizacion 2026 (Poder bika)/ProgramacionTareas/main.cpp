@@ -70,7 +70,7 @@ void calcular_makespan(vector<int>telas, vector<telares> &maquinas) {
 }
 
 int main() {
-    vector<int> telas={10, 7, 8, 12, 6, 9}; // Telas a tejer
+    vector<int> telas={10, 7, 9, 12, 6, 8}; // Telas a tejer
     vector<telares> maquinas={
         {5,0},
         {4,0},
