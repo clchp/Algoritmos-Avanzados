@@ -64,7 +64,6 @@ void descolocar(int matriz[N][M], int direccionesCorte[4][2],int dir, int c, int
 }
 
 void backtracking(int matriz[N][M],int direcciones[8][2],int c,int x,int y,int numero_actual,int& mejor_cantidad,int mejor_matriz[N][M],int direccionesCorte[4][2]) {
-
     // ACTUALIZAR MEJOR SOLUCION
     if (numero_actual - 1 > mejor_cantidad) {
         mejor_cantidad = numero_actual - 1;
@@ -75,23 +74,18 @@ void backtracking(int matriz[N][M],int direcciones[8][2],int c,int x,int y,int n
     for (int dir = 0; dir < 4; dir++) {
         int fin_x;
         int fin_y;
-
-        if (colocar(matriz, direccionesCorte, dir, c,
-                     x, y, numero_actual,
-                     fin_x, fin_y)) {
+        if (colocar(matriz, direccionesCorte, dir, c,x, y, numero_actual,fin_x, fin_y)) {
             // DESDE LA PUNTA FINAL
             // BUSCAMOS NUEVOS INICIOS ADYACENTES
             bool encontro = false;
             for (int i = 0; i < 8; i++) {
                 int nx = fin_x + direcciones[i][0];
                 int ny = fin_y + direcciones[i][1];
-                if (posicion_valida(nx, ny) &&
-                    matriz[nx][ny] == 0) {
+                if (posicion_valida(nx, ny) &&matriz[nx][ny] == 0) {
                     encontro = true;
                     backtracking(matriz,direcciones,c,nx,ny,numero_actual + 1,mejor_cantidad,mejor_matriz,direccionesCorte);
                 }
             }
-
             // SI YA NO HAY DONDE CONTINUAR
             if (!encontro) {
                 if (numero_actual > mejor_cantidad) {
