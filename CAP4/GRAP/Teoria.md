@@ -46,3 +46,98 @@ Un candidato entra a la RCL si su costo se encuentra dentro del intervalo:
 $$
 [\text{Mínimo},\ \text{Mínimo} + \alpha(\text{Máximo} - \text{Mínimo})]
 $$
+
+GRASP (*Greedy Randomized Adaptive Search Procedure*) es una metaheurística multiarranque que repite iterativamente dos fases:
+
+1. **Construcción Greedy Aleatorizada**, donde se genera una solución utilizando una Lista Restringida de Candidatos (RCL).
+2. **Búsqueda Local**, donde se mejora la solución obtenida explorando su vecindad.
+
+Al finalizar todas las iteraciones, se retorna la mejor solución encontrada.
+
+## Pseudocódigo General de GRASP
+
+```text
+GRASP(Instancia, α)
+
+    mejorGlobal ← NULL
+
+    Mientras no se cumpla la condición de parada hacer
+
+        // =========================
+        // FASE DE CONSTRUCCIÓN
+        // =========================
+
+        S ← ∅
+        N ← conjunto de candidatos
+
+        Mientras N ≠ ∅ hacer
+
+            β ← Mejor { c(x) : x ∈ N }
+            τ ← Peor  { c(x) : x ∈ N }
+
+            Si es minimización entonces
+
+                RCL ← { x ∈ N :
+                        β ≤ c(x) ≤ β + α(τ - β) }
+
+            Sino // maximización
+
+                RCL ← { x ∈ N :
+                        β - α(β - τ) ≤ c(x) ≤ β }
+
+            Fin Si
+
+            x ← elemento aleatorio de RCL
+
+            Agregar x a S
+
+            Actualizar N
+
+        Fin Mientras
+
+
+        // =========================
+        // FASE DE MEJORÍA
+        // =========================
+
+        mejora ← verdadero
+
+        Mientras mejora hacer
+
+            mejora ← falso
+
+            Generar vecindad F(S)
+
+            Para cada vecino v ∈ F(S) hacer
+
+                Si v es mejor que S entonces
+
+                    S ← v
+                    mejora ← verdadero
+
+                    Salir del ciclo
+
+                Fin Si
+
+            Fin Para
+
+        Fin Mientras
+
+
+        // =========================
+        // ACTUALIZAR MEJOR SOLUCIÓN
+        // =========================
+
+        Si mejorGlobal = NULL o
+           S es mejor que mejorGlobal entonces
+
+            mejorGlobal ← S
+
+        Fin Si
+
+    Fin Mientras
+
+    Retornar mejorGlobal
+
+Fin GRASP
+```
