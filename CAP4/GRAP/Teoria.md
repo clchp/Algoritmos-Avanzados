@@ -46,7 +46,9 @@ Un candidato entra a la RCL si su costo se encuentra dentro del intervalo:
 $$
 [\text{Mínimo},\ \text{Mínimo} + \alpha(\text{Máximo} - \text{Mínimo})]
 $$
+
 ---
+
 GRASP (*Greedy Randomized Adaptive Search Procedure*) es una metaheurística multiarranque que repite iterativamente dos fases:
 
 1. **Construcción Greedy Aleatorizada**, donde se genera una solución utilizando una Lista Restringida de Candidatos (RCL).
