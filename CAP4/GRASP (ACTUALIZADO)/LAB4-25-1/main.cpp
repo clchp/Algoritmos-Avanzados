@@ -55,7 +55,7 @@ void hallar_maquina_libre(vector<Linea> &lineas_iteracion, Orden aleatorio) {
     int maquina_libre=-1;
     for (int i=0;i<lineas_iteracion.size();i++) {
         if (tiempo_minimo>lineas_iteracion[i].tiempo_linea+aleatorio.tiempo_orden) {
-            tiempo_minimo=lineas_iteracion[i].tiempo_linea;
+            tiempo_minimo=lineas_iteracion[i].tiempo_linea+aleatorio.tiempo_orden;
             maquina_libre=i; //el id de la maquina más libre con esa orden
         }
     }
