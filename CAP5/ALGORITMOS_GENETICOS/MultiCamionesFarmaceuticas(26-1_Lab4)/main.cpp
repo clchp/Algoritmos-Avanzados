@@ -13,9 +13,9 @@
 using namespace std;
 
 // ----------------------------------------------------------
-// Calcula el fitness: Optimización lexicográfica
-// Prioridad 1 (Principal): Minimizar camiones usados
-// Prioridad 2 (Secundaria): Minimizar desperdicio en los camiones activos (Cargar más peso)
+// Calcula el fitness: Optimización de menor cantidad de camiones usados
+// Prioridad Principal: Minimizar camiones usados
+// Prioridad Secundaria: Minimizar desperdicio en los camiones activos (Cargar más peso)
 // ----------------------------------------------------------
 int calculafitness(const vector<int> &cromo,
                    int *paq, int numPaq,
