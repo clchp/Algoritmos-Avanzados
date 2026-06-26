@@ -43,7 +43,7 @@ bool hacer_combinacion(int indice,int P,int k,vector<int>t,vector<int >&indices,
 int main() {
 
     int P=15;
-    int k=4;
+    int k=3;
     vector<int> t={2, 8, 9, 6, 7, 6};
     vector<vector<int>> listaCombinaciones;
 
