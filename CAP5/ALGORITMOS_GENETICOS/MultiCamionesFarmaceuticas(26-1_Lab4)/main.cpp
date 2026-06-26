@@ -51,6 +51,7 @@ int calculafitness(const vector<int> &cromo,
     // Multiplicamos por un peso grande (100000) para penalizar el uso de más camiones.
     // de esta manera, tener menos camiones siempre dará un fitness mayor. a igualdad de camiones,
     // ganará el que tenga mayor carga total (lo que equivale a menor desperdicio).
+    // RESUMEN PARA PRIORIDADES: "fitness = (criterio más importante * 100000) + criterio secundario"[MULTIPLICAR POR NUMERO GRANDE ES COMO EL PESO QUE TIENE ESA PRIORIDAD]
     int fitness = (numCam - camionesUsados) * 100000 + sumaUsoTotal;
 
     return fitness;
