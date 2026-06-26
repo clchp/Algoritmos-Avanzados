@@ -35,21 +35,21 @@ int calculafitness(const vector<int> &cromo,
             }
         }
 
-        // Si se pasa de la capacidad de este camión, la solución es inválida
+        // si se pasa de la capacidad de este camión, la solución no es válida
         if (uso > cap) {
             return 0;
         }
 
-        // Si el camión lleva al menos un paquete, se considera en uso
+        // si el camión lleva al menos un paquete, se considera en uso
         if (uso > 0) {
             camionesUsados++;
             sumaUsoTotal += uso;
         }
     }
 
-    // Estructuración del fitness lexicográfico:
-    // Multiplicamos por un peso grande (100000) para penalizar rigurosamente el uso de más camiones.
-    // De esta manera, tener menos camiones siempre dará un fitness mayor. A igualdad de camiones,
+    // Estructuración del fitness:
+    // Multiplicamos por un peso grande (100000) para penalizar el uso de más camiones.
+    // de esta manera, tener menos camiones siempre dará un fitness mayor. a igualdad de camiones,
     // ganará el que tenga mayor carga total (lo que equivale a menor desperdicio).
     int fitness = (numCam - camionesUsados) * 100000 + sumaUsoTotal;
 
