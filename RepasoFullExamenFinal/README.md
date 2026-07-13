@@ -90,3 +90,8 @@ A continuación se detallan los cambios estructurales y lógicos al migrar de un
   ```cpp
   // Ejemplo en Problema de la Mochila
   sumap += cromo[i] * paq[i];
+* **Entero:** Ya no se evalúa una condición binaria, sino el impacto de la asignación específica del gen.
+  ```cpp
+  int maquina_asignada = cromo[i];
+  fitness += matriz_rendimiento[i][maquina_asignada];
+  ```
