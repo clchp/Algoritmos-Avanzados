@@ -95,6 +95,24 @@ A continuación se detallan los cambios estructurales y lógicos al migrar de un
   int maquina_asignada = cromo[i];
   fitness += matriz_rendimiento[i][maquina_asignada];
   ```
+  #### 🎯 Estrategias Avanzadas para el Fitness
+
+* **¿Cómo Minimizar en un AG?**
+  Por defecto, la estructura macro del AG está diseñada para **maximizar** (las soluciones con mayor fitness sobreviven). Si tu problema requiere minimizar (costos, distancias, penalizaciones), **no cambies la lógica del AG**. En su lugar, transforma la ecuación del fitness para que el valor más pequeño devuelva el fitness más alto:
+  $$\text{Fitness} = 10000 - \text{Criterio a Minimizar}$$
+  *De esta forma, si el costo o desperdicio es muy pequeño, el resultado final será un fitness gigante y el algoritmo lo preferirá.*
+
+* **Manejo de Multicriterio (Prioridades por Pesos)**
+  Cuando el problema exige cumplir varios objetivos con un orden de importancia estricto (por ejemplo: primero minimizar camiones y, a igualdad de camiones, maximizar la carga total), se aplica una ponderación jerárquica multiplicando la prioridad alfa por un peso masivo:
+  ```cpp
+  // Estructuración del fitness para prioridades:
+  // Multiplicamos por un peso grande (100000) para penalizar el uso de más camiones.
+  // De esta manera, tener menos camiones siempre dará un fitness mayor.
+  // A igualdad de camiones, ganará el que tenga mayor carga total (menor desperdicio).
+  
+  fitness = (criterio principal * 100000) + criterio secundario;
+  ```
+  *Multiplicar por un número grande funciona como un "ancla" de prioridad: el criterio secundario jamás podrá superar el valor del principal, sirviendo únicamente como un criterio de desempate refinado.*
 ### 2. Aberración (Validación de Factibilidad)
 Evalúa si un cromosoma representa una solución válida ante las restricciones del problema.
 * **Binario:** Control de límites lineales simples, como que el peso total no supere la capacidad máxima.
