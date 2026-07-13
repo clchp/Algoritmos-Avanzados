@@ -36,11 +36,11 @@ Se utiliza cuando los mejores valores *greedy* son los más grandes (por ejemplo
 * **Parámetros:**
   * $\beta = \text{greedy máximo}$ (el mejor elemento)
   * $\tau = \text{greedy mínimo}$ (el peor elemento)
-  * $\text{límite\_inferior} = \beta - \alpha \cdot (\beta - \tau)$
+  * $\text{limite}_{\text{inf}} = \beta - \alpha \cdot (\beta - \tau)$
 
 * **Condición de pertenencia a la RCL:**
   La RCL contendrá todos los elementos $i$ que cumplan con:
-  $$\text{greedy}(i) \ge \text{límite\_inferior}$$
+  $$\text{greedy}(i) \ge \text{limite}_{\text{inf}}$$
   *Es decir, se toman los elementos desde el valor máximo hasta aquellos que alcancen este umbral inferior.*
 
 #### 📉 Caso ASCENDENTE (Minimización)
@@ -49,11 +49,11 @@ Se utiliza cuando los mejores valores *greedy* son los más pequeños (por ejemp
 * **Parámetros:**
   * $\beta = \text{greedy mínimo}$ (el mejor elemento)
   * $\tau = \text{greedy máximo}$ (el peor elemento)
-  * $\text{límite\_superior} = \beta + \alpha \cdot (\tau - \beta)$
+  * $\text{limite}_{\text{sup}} = \beta + \alpha \cdot (\tau - \beta)$
 
 * **Condición de pertenencia a la RCL:**
   La RCL contendrá todos los elementos $i$ que cumplan con:
-  $$\text{greedy}(i) \le \text{límite\_superior}$$
+  $$\text{greedy}(i) \le \text{limite}_{\text{sup}}$$
 
 ---
 
