@@ -95,3 +95,63 @@ A continuación se detallan los cambios estructurales y lógicos al migrar de un
   int maquina_asignada = cromo[i];
   fitness += matriz_rendimiento[i][maquina_asignada];
   ```
+### 2. Aberración (Validación de Factibilidad)
+Evalúa si un cromosoma representa una solución válida ante las restricciones del problema.
+* **Binario:** Control de límites lineales simples, como que el peso total no supere la capacidad máxima.
+* **Entero:** Validaciones lógicas más complejas, por ejemplo:
+  * Controlar la cantidad máxima de tareas asignadas a una misma máquina.
+  * Garantizar que al menos un operador esté asignado a cada máquina crítica.
+
+### 3. Base de Representación
+Determina el rango numérico que puede tomar cada gen.
+* **Binario:** La base es fijada en `2` (valores permitidos: 0 y 1).
+* **Entero:** La base cambia según las opciones del problema.
+  * *Ejemplo:* Si existen las máquinas del 1 al 5 y la posición `0` indica "no asignado", la base es `6` (rango de valores: 0, 1, 2, 3, 4, 5).
+
+### 4. Generación de Población Inicial
+* **Binario:**
+  ```cpp
+  cromo[i] = rand() % 2; // Genera 0 o 1
+  ```
+* **Entero:**
+  ```cpp
+  cromo[i] = rand() % base; // Genera valores de 0 a (base - 1)
+  ```
+
+### 5. Mutación
+* **Binario:** Operación simple de inversión de bits (flip).
+  ```cpp
+  if (gen == 0) gen = 1;
+  else gen = 0;
+  ```
+* **Entero:** Se selecciona un valor aleatorio dentro del alfabeto, asegurando idealmente que no se repita el valor actual.
+  ```cpp
+  int nuevo;
+  do {
+      nuevo = rand() % base;
+  } while (nuevo == padres[i][gen]); // Evita mutar al mismo valor
+  
+  padres[i][gen] = nuevo;
+  ```
+
+### 6. Inversión
+* **Binario:** Comúnmente suele implementarse cambiando los valores de los bits en un rango.
+* **Entero:** Se realiza una inversión posicional de un subsegmento mediante intercambios (`swap`), preservando la estructura interna del cromosoma.
+  ```cpp
+  int fin = rand() % padres[i].size();
+  int inicio = rand() % padres[i].size();
+  
+  if (inicio > fin) {
+      swap(inicio, fin);
+  }
+  
+  while (inicio < fin) {
+      swap(padres[i][inicio], padres[i][fin]);
+      inicio++;
+      fin--;
+  }
+  ```
+
+---
+
+> 📝 **Notas Finales:** Las modificaciones lógicas dependen enteramente de cómo se codifique el cromosoma. Aunque la estructura macro del algoritmo genético se conserva, la flexibilidad radica en adaptar el **Fitness**, la **Aberración (factibilidad)** y los **Operadores de variación** según el dominio del problema.
